@@ -7,7 +7,7 @@
 
     // target esnext: バージョンに合わせたコンパイルをBabel等に依存する。
     // targetは 2021年2月現在 node 14.xなら es2020でOK
-    "target": "es5" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
+    "target": "es2020" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */,
     "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */,
     // "lib": [],                             /* Specify library files to be included in the compilation. */
     // "allowJs": true,                       /* Allow javascript files to be compiled. */
@@ -17,7 +17,7 @@
     // "declarationMap": true,                /* Generates a sourcemap for each corresponding '.d.ts' file. */
     // "sourceMap": true,                     /* Generates corresponding '.map' file. */
     // "outFile": "./",                       /* Concatenate and emit output to single file. */
-    // "outDir": "./",                        /* Redirect output structure to the directory. */
+    "outDir": "dist" /* 出力構造体をディレクトリにリダイレクトします。 */,
     // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                     /* Enable project compilation */
     // "tsBuildInfoFile": "./",               /* Specify file to store incremental compilation information */
@@ -29,7 +29,9 @@
 
     /* Strict Type-Checking Options */
     "strict": true /* Enable all strict type-checking options. */,
-    // "noImplicitAny": true,                 /* Raise error on expressions and declarations with an implied 'any' type. */
+
+    // 以下をfalseにすると any型を付与していなくてもerrorは出なくなります。
+    // "noImplicitAny": true,                 /* 暗黙の 'any' 型を持つ式や宣言に対してエラーを発生させる。 */
     // "strictNullChecks": true,              /* Enable strict null checks. */
     // "strictFunctionTypes": true,           /* Enable strict checking of function types. */
     // "strictBindCallApply": true,           /* Enable strict 'bind', 'call', and 'apply' methods on functions. */
@@ -69,5 +71,8 @@
     /* Advanced Options */
     "skipLibCheck": true /* Skip type checking of declaration files. */,
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+
+  // 外部出力の際にどこまでのファイル含めるか指定
+  "include": ["src/**/*"]
 }

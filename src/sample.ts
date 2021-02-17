@@ -31,3 +31,10 @@ export function Union1() {
 
 Tuple2();
 Union1();
+
+// unknown型
+// anyと異なり、型安全である。代入には寛容だが、以下のように値の利用には厳しい
+const probablyNumbers: unknown[] = ["0"];
+
+// Tips: toFixed() メソッドは、数を固定小数点表記を用いて整形します。
+// probablyNumbers[0].ToFixed(1); // errorで怒ってくれる

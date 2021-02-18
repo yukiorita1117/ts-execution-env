@@ -36,5 +36,5 @@ Union1();
 // anyと異なり、型安全である。代入には寛容だが、以下のように値の利用には厳しい
 const probablyNumbers: unknown[] = ["0"];
 
-// Tips: toFixed() メソッドは、数を固定小数点表記を用いて整形します。
+// Tips: toFixed() メソッドは、数を固定小数点表記を用いて整形します。 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 // probablyNumbers[0].ToFixed(1); // errorで怒ってくれる

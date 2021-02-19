@@ -24,7 +24,7 @@ export function Tuple2() {
 // 以下のようなstringとnumberの混じった配列の方はUnion型で定義するといける
 export function Union1() {
   let tmpArray: (string | number)[];
-  tmpArray = [1, 2, 4, "あああ", 10, "ろく"];
+  tmpArray = [1, 2, 4, "test", 10, "ろく"];
   console.log("ユニオン", tmpArray[3].toString());
   return tmpArray;
 }

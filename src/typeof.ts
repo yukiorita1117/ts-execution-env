@@ -17,3 +17,37 @@ let tmpObj: typeof myObject = { hoge: "" };
 
 tmpObj["hoge"] = "fuga";
 console.log(tmpObj); //{ hoge: 'fuga' }
+
+// --------------------------------------------------------------------------------
+
+// keyof
+// プロパティの名称を取得できる
+
+type SomeType = {
+  name: string;
+  id: number;
+  isOn: boolean;
+};
+
+let someKey: SomeType;
+// 以下だと name isOn がないと怒られる。
+// someKey = { id: 100 };
+
+// keyofを使って見ると...
+
+let someKey2: keyof SomeType;
+
+someKey2 = "id";
+console.log("someKey2: ", someKey2); // id
+
+// typeof と keyofを組み合わせることによって
+// 型推論をする場面で有効。
+
+let tmpOrita = {
+  name: "jhcoder",
+  id: 100,
+};
+
+let tmpKey: keyof typeof tmpOrita;
+tmpKey = "id";
+// tmpKey = "address"; //これはerrorになる

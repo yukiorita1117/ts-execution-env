@@ -71,8 +71,8 @@
     // "emitDecoratorMetadata": true,         /* Enables experimental support for emitting type metadata for decorators. */
 
     /* Advanced Options */
-    "skipLibCheck": true /* Skip type checking of declaration files. */,
-    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
+    "skipLibCheck": true /* 宣言ファイルの型チェックをスキップします。*/,
+    "forceConsistentCasingInFileNames": true /* 矛盾したケースの同じファイルへの参照を許可しないようにします。 */
   },
 
   // 外部出力の際にどこまでのファイル含めるか指定

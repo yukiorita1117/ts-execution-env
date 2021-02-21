@@ -6,9 +6,7 @@
 // JSXにおいてこの＜＞を用いたアサーションは非推奨。だけど割と使われている。
 const someValue: string = "これは文字列です";
 let stringLength: number = (<string>someValue).length;
-const tmp = someValue.length;
-// TODO 何で string lengthが標準出力できない？
-console.log("ああああ", String(tmp));
+
 console.log("assersion : ", String(stringLength));
 
 let someValue2: any = "これは文字列です";
@@ -19,3 +17,9 @@ console.log("not assersion : ", stringLength2);
 const hogeString: any = "ほげ";
 const hogeStringLength: number = (hogeString as string).length;
 console.log("hogeStringLength : ", hogeStringLength);
+
+// TODO
+const tmp: number = 1;
+// number型が標準出力できない？ MDNではできるのに何でこっちでできない？
+console.log("ああああ", typeof tmp);
+console.log("いいいい", tmp);

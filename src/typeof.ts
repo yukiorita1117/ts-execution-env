@@ -4,6 +4,7 @@ asString = "ほげ";
 
 // 宣言すみの型を割り当てれる。
 // 型クエリーと呼ばれるもの 型キャプチャーを取得でき、その型を取得できる
+// 簡単にいうと指定したものの型を継承できる
 const value: typeof asString = "ああああ";
 
 // 以下はerrorになる
@@ -34,7 +35,8 @@ let someKey: SomeType;
 // someKey = { id: 100 };
 
 // keyofを使って見ると...
-
+// name / id / isOn のどれかと推論してくれる
+// 指定したもので型をしばれるということ
 let someKey2: keyof SomeType;
 
 someKey2 = "id";
@@ -48,6 +50,7 @@ let tmpOrita = {
   id: 100,
 };
 
+// tmpOritaの型を継承し、keyofでtmpOritaの持つ型でしばれる
 let tmpKey: keyof typeof tmpOrita;
 tmpKey = "id";
 // tmpKey = "address"; //これはerrorになる

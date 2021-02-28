@@ -6,8 +6,7 @@
 // JSXにおいてこの＜＞を用いたアサーションは非推奨。だけど割と使われている。
 const someValue: string = "これは文字列です";
 let stringLength: number = (<string>someValue).length;
-
-console.log("assersion : ", String(stringLength));
+console.log(String(stringLength));
 
 let someValue2: any = "これは文字列です";
 let stringLength2: number = someValue2.length;
